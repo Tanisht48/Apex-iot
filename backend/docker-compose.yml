@@ -1,0 +1,9 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:3000}
+      - JWT_SECRET=${JWT_SECRET:-change-me}
+      - DEMO_OTP=${DEMO_OTP:-1234}
